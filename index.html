@@ -41,7 +41,8 @@
     <section id="inicio" class="hero">
         <div class="hero-bg-pattern"></div>
         <div class="hero-overlay"></div>
-        <div class="hero-watermark">FN</div>
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
         <div class="hero-content">
             <img src="assets/logo.png" alt="Ferronatto e Navarini Advocacia" class="hero-logo reveal">
             <p class="hero-eyebrow reveal">Escritório de Advocacia</p>
@@ -71,6 +72,53 @@
         </a>
     </section>
 
+    <!-- ===== DIFERENCIAIS ===== -->
+    <section class="diferenciais">
+        <div class="container">
+            <div class="diferenciais-grid">
+
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                    </div>
+                    <div class="diferencial-text">
+                        <h3>Atendimento Humanizado</h3>
+                        <p>Cada cliente é único. Escuta atenta e acompanhamento personalizado em todas as etapas do processo.</p>
+                    </div>
+                </div>
+
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <div class="diferencial-text">
+                        <h3>Especialidade Técnica</h3>
+                        <p>Domínio profundo em Direito Previdenciário e Civil, com atuação focada e resultados concretos.</p>
+                    </div>
+                </div>
+
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <div class="diferencial-text">
+                        <h3>Transparência e Ética</h3>
+                        <p>Clareza em cada fase do processo, com total responsabilidade e integridade na defesa dos seus direitos.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- ===== SOBRE ===== -->
     <section id="sobre" class="section sobre">
         <div class="container">
@@ -88,30 +136,26 @@
             <div class="advogadas-grid">
                 <div class="advogada-card">
                     <div class="advogada-avatar">
-                        <div class="avatar-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                        </div>
+                        <!-- Quando a foto chegar, substitua a linha abaixo por:
+                             <img src="assets/foto-raquel.jpg" alt="Raquel Ferronatto" class="advogada-foto"> -->
+                        <div class="avatar-initials">RF</div>
                     </div>
                     <h3 class="advogada-name">Raquel Ferronatto</h3>
                     <p class="advogada-title">Advogada</p>
+                    <p class="advogada-oab">OAB/RS 00.000</p>
                     <div class="card-gold-line"></div>
                     <p class="advogada-bio">Especialista em Direito Previdenciário e Direito Civil, atua na defesa dos direitos dos cidadãos perante o INSS e nas demandas cíveis, com foco em resultados e na humanização do atendimento.</p>
                 </div>
 
                 <div class="advogada-card">
                     <div class="advogada-avatar">
-                        <div class="avatar-circle">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
-                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                        </div>
+                        <!-- Quando a foto chegar, substitua a linha abaixo por:
+                             <img src="assets/foto-vanessa.jpg" alt="Vanessa Pavan Navarini da Silva" class="advogada-foto"> -->
+                        <div class="avatar-initials">VN</div>
                     </div>
                     <h3 class="advogada-name">Vanessa Pavan Navarini da Silva</h3>
                     <p class="advogada-title">Advogada</p>
+                    <p class="advogada-oab">OAB/RS 00.000</p>
                     <div class="card-gold-line"></div>
                     <p class="advogada-bio">Atuante nas áreas de Direito Previdenciário e Direito Civil, comprometida com a defesa dos direitos e interesses de seus clientes em todas as instâncias, com dedicação e rigor técnico.</p>
                 </div>

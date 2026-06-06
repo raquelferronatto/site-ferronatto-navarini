@@ -74,7 +74,7 @@
     // ---- ANIMAÇÕES DE ENTRADA (scroll reveal) ----
     const revealEls = document.querySelectorAll(
         '.reveal, .section-header, .sobre-intro, .advogada-card, .area-card, ' +
-        '.contato-item, .contato-mapa, .contato-actions'
+        '.contato-item, .contato-mapa, .contato-actions, .diferencial-item'
     );
 
     const revealObserver = new IntersectionObserver(function (entries) {
