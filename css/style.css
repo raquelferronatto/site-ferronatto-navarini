@@ -11,7 +11,7 @@
     --gold-dark:   #9b7818;
     --gold-mid:    #c9a020;
     --gold-light:  #dbb83a;
-    --gold-cream:  #f0d870;
+    --gold-cream:  #e8cf6a;
     --gold-grad:   linear-gradient(135deg, #9b7818 0%, #dbb83a 45%, #f0d060 70%, #c9a020 100%);
     --gold-text:   linear-gradient(90deg, #9b7818, #dbb83a, #f0d060, #c9a020);
     --text:        #f5f5f5;
@@ -76,10 +76,33 @@ ul {
 }
 
 .gold-line {
-    width: 60px;
+    width: 48px;
     height: 2px;
     background: var(--gold-grad);
-    margin: 20px auto 0;
+    margin: 24px auto 0;
+    position: relative;
+}
+
+.gold-line::before,
+.gold-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 1px;
+}
+
+.gold-line::before {
+    right: calc(100% + 8px);
+    background: linear-gradient(270deg, var(--gold-mid), transparent);
+    opacity: 0.5;
+}
+
+.gold-line::after {
+    left: calc(100% + 8px);
+    background: linear-gradient(90deg, var(--gold-mid), transparent);
+    opacity: 0.5;
 }
 
 .card-gold-line {
@@ -91,26 +114,39 @@ ul {
 
 /* ---- SEÇÕES COMUNS ---- */
 .section {
-    padding: 110px 0;
+    padding: 120px 0;
     position: relative;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 72px;
+    margin-bottom: 80px;
 }
 
 .section-eyebrow {
     font-family: var(--font-b);
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
     background: var(--gold-grad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+    content: '';
+    flex-shrink: 0;
+    width: 22px;
+    height: 1px;
+    background: var(--gold-mid);
+    opacity: 0.65;
 }
 
 .section-title {
@@ -118,7 +154,7 @@ ul {
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 700;
     color: var(--text);
-    letter-spacing: 0.01em;
+    letter-spacing: 0.04em;
 }
 
 /* ============================================================
@@ -298,10 +334,10 @@ ul {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 700px;
-    height: 700px;
+    width: 860px;
+    height: 860px;
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 42%, rgba(219, 184, 58, 0.09) 0%, rgba(219, 184, 58, 0.04) 38%, transparent 68%);
+    background: radial-gradient(circle at 50% 42%, rgba(219, 184, 58, 0.11) 0%, rgba(219, 184, 58, 0.05) 38%, transparent 68%);
     pointer-events: none;
     z-index: 1;
 }
@@ -310,7 +346,7 @@ ul {
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 0 24px;
+    padding: calc(var(--nav-h) * 0.25) 24px 0;
     max-width: 860px;
 }
 
@@ -422,6 +458,10 @@ ul {
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
 }
 
 .scroll-line {
@@ -429,7 +469,6 @@ ul {
     width: 1px;
     height: 60px;
     background: linear-gradient(to bottom, var(--gold-mid), transparent);
-    margin: 0 auto;
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -650,6 +689,24 @@ ul {
     padding: 48px 40px;
     text-align: center;
     transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.advogada-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gold-grad);
+    opacity: 0.2;
+    transition: opacity 0.35s;
+}
+
+.advogada-card:hover::before {
+    opacity: 1;
 }
 
 .advogada-card:hover {
@@ -772,10 +829,10 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 2px;
     background: var(--gold-grad);
-    opacity: 0;
-    transition: opacity 0.3s;
+    opacity: 0.2;
+    transition: opacity 0.35s;
 }
 
 .area-card:hover {
@@ -904,7 +961,7 @@ ul {
 .contato-detail {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
 .contato-label {
